@@ -2,4 +2,4 @@
 
 fetch info from JSON file in a remote site then show on apple mobile. App for iOS.
 
-<img src = "fetchJSON/Simulator Screen Shot - iPhone 12 Pro Max - 2021-07-21 at 19.32.59.png" width="400">
+<img src = "fetchJSON/simulator_screenshot_7566EE5E-1673-410C-9E7D-ED6FC92D5AD1.png" width="400">
