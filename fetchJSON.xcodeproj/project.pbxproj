@@ -11,6 +11,12 @@
 		BF86E57426A8324B008FA1DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF86E57326A8324B008FA1DE /* ContentView.swift */; };
 		BF86E57626A83257008FA1DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF86E57526A83257008FA1DE /* Assets.xcassets */; };
 		BF86E57926A83257008FA1DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF86E57826A83257008FA1DE /* Preview Assets.xcassets */; };
+		BF86E58626A8491C008FA1DE /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF86E58126A8491C008FA1DE /* PostList.swift */; };
+		BF86E58726A8491C008FA1DE /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF86E58226A8491C008FA1DE /* Data.swift */; };
+		BF86E58826A8491C008FA1DE /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF86E58326A8491C008FA1DE /* ImageCache.swift */; };
+		BF86E58926A8491C008FA1DE /* AsyncImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF86E58426A8491C008FA1DE /* AsyncImageLoader.swift */; };
+		BF86E59626A8920C008FA1DE /* Simulator Screen Shot - iPhone 12 Pro Max - 2021-07-21 at 19.32.59.png in Resources */ = {isa = PBXBuildFile; fileRef = BF86E59526A8920C008FA1DE /* Simulator Screen Shot - iPhone 12 Pro Max - 2021-07-21 at 19.32.59.png */; };
+		BF86E59926A96483008FA1DE /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = BF86E59826A96482008FA1DE /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +26,12 @@
 		BF86E57526A83257008FA1DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF86E57826A83257008FA1DE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BF86E57A26A83257008FA1DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF86E58126A8491C008FA1DE /* PostList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostList.swift; sourceTree = "<group>"; };
+		BF86E58226A8491C008FA1DE /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		BF86E58326A8491C008FA1DE /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		BF86E58426A8491C008FA1DE /* AsyncImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImageLoader.swift; sourceTree = "<group>"; };
+		BF86E59526A8920C008FA1DE /* Simulator Screen Shot - iPhone 12 Pro Max - 2021-07-21 at 19.32.59.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone 12 Pro Max - 2021-07-21 at 19.32.59.png"; sourceTree = "<group>"; };
+		BF86E59826A96482008FA1DE /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +48,7 @@
 		BF86E56526A8324B008FA1DE = {
 			isa = PBXGroup;
 			children = (
+				BF86E59826A96482008FA1DE /* .gitignore */,
 				BF86E57026A8324B008FA1DE /* fetchJSON */,
 				BF86E56F26A8324B008FA1DE /* Products */,
 			);
@@ -52,6 +65,11 @@
 		BF86E57026A8324B008FA1DE /* fetchJSON */ = {
 			isa = PBXGroup;
 			children = (
+				BF86E59526A8920C008FA1DE /* Simulator Screen Shot - iPhone 12 Pro Max - 2021-07-21 at 19.32.59.png */,
+				BF86E58426A8491C008FA1DE /* AsyncImageLoader.swift */,
+				BF86E58226A8491C008FA1DE /* Data.swift */,
+				BF86E58326A8491C008FA1DE /* ImageCache.swift */,
+				BF86E58126A8491C008FA1DE /* PostList.swift */,
 				BF86E57126A8324B008FA1DE /* fetchJSONApp.swift */,
 				BF86E57326A8324B008FA1DE /* ContentView.swift */,
 				BF86E57526A83257008FA1DE /* Assets.xcassets */,
@@ -126,7 +144,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF86E59926A96483008FA1DE /* .gitignore in Resources */,
 				BF86E57926A83257008FA1DE /* Preview Assets.xcassets in Resources */,
+				BF86E59626A8920C008FA1DE /* Simulator Screen Shot - iPhone 12 Pro Max - 2021-07-21 at 19.32.59.png in Resources */,
 				BF86E57626A83257008FA1DE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,8 +158,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF86E58826A8491C008FA1DE /* ImageCache.swift in Sources */,
 				BF86E57426A8324B008FA1DE /* ContentView.swift in Sources */,
+				BF86E58626A8491C008FA1DE /* PostList.swift in Sources */,
+				BF86E58926A8491C008FA1DE /* AsyncImageLoader.swift in Sources */,
 				BF86E57226A8324B008FA1DE /* fetchJSONApp.swift in Sources */,
+				BF86E58726A8491C008FA1DE /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
