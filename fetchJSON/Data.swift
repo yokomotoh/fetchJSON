@@ -24,8 +24,17 @@ struct Post: Codable, Identifiable {
 }
 
 class Api {
+    var year: String = "2005"
+    let urlHead = "http://www.vinsfinsmotohama.shop/photos/famille_vincent_"
+    
+    init (year: String) {
+        self.year = year
+    }
+    
     func getPosts(completion:@escaping ([Post]) -> ()) {
-        guard let url = URL(string: "http://www.vinsfinsmotohama.shop/photos/famille_vincent_2005.json") else { return }
+        guard let url = URL(string:
+                                urlHead + year + ".json") else { return }
+        //"http://www.vinsfinsmotohama.shop/photos/famille_vincent_2005.json") else { return }
         //guard let url = URL(string: "https://jsonplaceholder.typicode.com/photos") else { return }
         
         URLSession.shared.dataTask(with: url) { (data, _, error) in

@@ -10,13 +10,15 @@ import Combine
 import Foundation
 
 struct PostList: View {
+    var year: String = "2005"
+    var title: String = "Faille Vincent"
     @State var posts: [Post] = []
     //let url = URL(string: "https://image.tmdb.org/t/p/original/pThyQovXQrw2m0s9x82twj48Jq4.jpg")!
         @State var numberOfRows = 0
     
     var body: some View {
         NavigationView {
-            list.navigationTitle("Romain").navigationBarItems(trailing: addButton)
+            list.navigationTitle(title).navigationBarItems(trailing: addButton)
                 }
         /*
         List(posts) { post in
@@ -54,7 +56,7 @@ struct PostList: View {
             }
         }
         .onAppear {
-            Api().getPosts { (posts) in
+            Api(year: year).getPosts { (posts) in
                 self.posts = posts
             }
         }
