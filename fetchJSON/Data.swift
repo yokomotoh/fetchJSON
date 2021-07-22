@@ -25,15 +25,18 @@ struct Post: Codable, Identifiable {
 
 class Api {
     var year: String = "2005"
-    let urlHead = "http://www.vinsfinsmotohama.shop/photos/famille_vincent_"
+    var title: String = "famille_vincent"
+    let urlHead = "http://www.vinsfinsmotohama.shop/photos/"
     
-    init (year: String) {
+    init (year: String, title: String) {
         self.year = year
+        self.title = title
     }
     
     func getPosts(completion:@escaping ([Post]) -> ()) {
+        let json_name = String(title + "_" + year)
         guard let url = URL(string:
-                                urlHead + year + ".json") else { return }
+                                urlHead + json_name + ".json") else { return }
         //"http://www.vinsfinsmotohama.shop/photos/famille_vincent_2005.json") else { return }
         //guard let url = URL(string: "https://jsonplaceholder.typicode.com/photos") else { return }
         

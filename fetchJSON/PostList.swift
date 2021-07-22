@@ -11,7 +11,7 @@ import Foundation
 
 struct PostList: View {
     var year: String = "2005"
-    var title: String = "Faille Vincent"
+    var title: String = "famille_vincent"
     @State var posts: [Post] = []
     //let url = URL(string: "https://image.tmdb.org/t/p/original/pThyQovXQrw2m0s9x82twj48Jq4.jpg")!
         @State var numberOfRows = 0
@@ -39,24 +39,36 @@ struct PostList: View {
      private var list: some View {
         List(0..<numberOfRows, id: \.self) { item in
         //List(posts) { post in
-             AsyncImage(
-                 //url: self.url,
-                 url: URL(string: posts[item].Image)!,
+            NavigationLink(
+                destination:
+                    AsyncImage(
+                        url: URL(string: posts[item].Image)!,
+                        placeholder: { Text("Loading ...")
+                            },
+                        image: { Image(uiImage: $0).resizable() }
+                    )
+                    .scaledToFit()
+            ) {
+            AsyncImage(
+                //url: self.url,
+                url: URL(string: posts[item].Image)!,
                 placeholder: { Text("Loading ...")
-                 },
+                    },
                 image: { Image(uiImage: $0).resizable() }
-             )
-             //.frame(minHeight: 200, maxHeight: 200)
-             //.aspectRatio(2 / 3, contentMode: .fit)
-             .scaledToFit()
-             //.frame(idealHeight: UIScreen.main.bounds.width / 2 * 3)
+                )
+                //.frame(minHeight: 200, maxHeight: 200)
+                //.aspectRatio(2 / 3, contentMode: .fit)
+                .scaledToFit()
+                //.frame(idealHeight: UIScreen.main.bounds.width / 2 * 3)
+            
             VStack(alignment: .leading){
                 Text(posts[item].Name)
                 Text(posts[item].Category)
             }
+            }
         }
         .onAppear {
-            Api(year: year).getPosts { (posts) in
+            Api(year: year, title: title).getPosts { (posts) in
                 self.posts = posts
             }
         }

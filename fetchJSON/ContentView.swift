@@ -10,10 +10,10 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            PostList(year: "2005", title: "Famille Vincent 2005")
+            PostList(year: "2005", title: "famille_vincent")
                 .tabItem { Label("2005", systemImage: "person.fill") }
             
-            PostList(year: "2006", title: "Famille Vincent 2006")
+            PostList(year: "2006", title: "famille_vincent")
                 .tabItem { Label("2006", systemImage: "person.fill") }
         }
     }
